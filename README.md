@@ -1,4 +1,4 @@
-# technical_summary_proj
+# Article Summarizer for Social Shares
 
 The article summarizer is made to produce potential social media posts with a summary and the article link. It uses two approaches - the ['PageRank'](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/) implementation of TextRank and the [summanlp](https://github.com/summanlp/textrank) library.
 
