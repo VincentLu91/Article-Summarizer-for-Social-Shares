@@ -8,7 +8,6 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     error = None
-    summarizers = ['PageRank', 'SummaNLP']
     if request.method == "POST":
         article_link = request.form['article_link']
         if not article_link:
@@ -17,12 +16,10 @@ def index():
         if not validators.url(article_link):
             error = 'Article Link is invalid'
             return render_template('index.html', error=error)
-        
-        summarizerSelected = request.form.get('summarizerSelected')
-        
+                
         summaries_tr = summarize_article_tr(article_link)
         
-        return render_template('index.html', article_link=article_link, summarizers=summarizers, summaries_tr=summaries_tr)
+        return render_template('index.html', article_link=article_link, summaries_tr=summaries_tr)
     else:
         return render_template('index.html')
 
