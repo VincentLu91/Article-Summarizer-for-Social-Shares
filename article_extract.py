@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from summa import summarizer
 from summa.summarizer import summarize
 
+# define a function that identifies paragraphs in article
 def convert_article_text_to_paragraphs(article_link):
     the_url = requests.get(article_link).text
     soup = BeautifulSoup(the_url,'html.parser')
