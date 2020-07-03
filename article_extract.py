@@ -30,7 +30,7 @@ def convert_article_text_to_paragraphs(article_link):
 
     paragraphs = ''.join(list_of_paragraphs)
     return paragraphs
-
+'''
 # pagerank implementation
 def summarize_article_pr(article_link):
     paragraphs = convert_article_text_to_paragraphs(article_link)
@@ -94,7 +94,7 @@ def summarize_article_pr(article_link):
         summaries.append(ranked_sentences[i][1])
     
     return summaries
-
+'''
 # textrank implementation with summa summarizer
 def summarize_article_tr(article_link):
     paragraphs = convert_article_text_to_paragraphs(article_link)

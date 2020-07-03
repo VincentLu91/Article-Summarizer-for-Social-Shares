@@ -15,27 +15,10 @@
     {% endif %}
     <form action="/" method="POST">
         <input placeholder="https://en.wikipedia.org/wiki/Principal_component_analysis" type="text" name="article_link" id="article_link">
-        <select name="summarizerSelected" method="GET" action="/">
-            <option value="PageRank">'PageRank' Implementation of TextRank</option>
-            <option value="SummaNLP">SummaNLP Implementation of TextRank</option>
-        </select>
         <input type="submit" value="Summarize">
     </form>
     <br>
     <p>Here is a list of potential summaries you could use to post on your Social Media feed.</p>
-    <h4>{{ summarizerSelected }}</h4>
-    
-    {% if summarizerSelected == 'PageRank' %}
-        {% for summary in summaries_pr %}
-            [{{loop.index}}]
-            <br>
-            {{ summary }}
-            <br>
-            {{ article_link }}
-            <br>
-            <br>
-        {% endfor %}
-    {% else %}
         {% for summary in summaries_tr %}
             [{{loop.index}}]
             <br>
@@ -45,6 +28,5 @@
             <br>
             <br>
         {% endfor %}
-    {% endif %}
 </div>
 {% endblock %}

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 import validators
-from article_extract import summarize_article_pr, summarize_article_tr
+from article_extract import summarize_article_tr
 
 app = Flask(__name__)
 
@@ -20,11 +20,9 @@ def index():
         
         summarizerSelected = request.form.get('summarizerSelected')
         
-        summaries_pr = summarize_article_pr(article_link)
         summaries_tr = summarize_article_tr(article_link)
         
-        return render_template('index.html', article_link=article_link, summarizers=summarizers, summarizerSelected=summarizerSelected,
-                                summaries_pr=summaries_pr, summaries_tr=summaries_tr)
+        return render_template('index.html', article_link=article_link, summarizers=summarizers, summaries_tr=summaries_tr)
     else:
         return render_template('index.html')
 
