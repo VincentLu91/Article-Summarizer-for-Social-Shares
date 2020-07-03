@@ -1,14 +1,14 @@
-from flask import Flask, render_template, flash, request, redirect
+from flask import Flask, render_template, request
 from datetime import datetime
 import validators
-from article_extract import summarize_article_pr, summarize_article_tr, remove_stopwords
+from article_extract import summarize_article_pr, summarize_article_tr
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     error = None
-    summarizers = ['PageRank', 'TextRank']
+    summarizers = ['PageRank', 'SummaNLP']
     if request.method == "POST":
         article_link = request.form['article_link']
         if not article_link:

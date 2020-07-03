@@ -17,8 +17,6 @@ def remove_stopwords(sen):
     sen_new = " ".join([i for i in sen if i not in stop_words])
     return sen_new
 
-# example url: https://en.wikipedia.org/wiki/Principal_component_analysis
-
 def convert_article_text_to_paragraphs(article_link):
     the_url = requests.get(article_link).text
     soup = BeautifulSoup(the_url,'html.parser')
@@ -87,26 +85,18 @@ def summarize_article_pr(article_link):
 
     # extract the sentences ranked in descending order
     ranked_sentences = sorted(((pr[i],s) for i,s in enumerate(list_of_sentences)), reverse=True)
-
+    
     # initialize list of top 10 sentences as a summary:
-    top_ten_sentences = []
+    summaries = []
 
     # Extract top 10 sentences as the summary
-    for i in range(10):
-        top_ten_sentences.append(ranked_sentences[i][1])
+    for i in range(len(ranked_sentences)):
+        summaries.append(ranked_sentences[i][1])
     
-    return top_ten_sentences
+    return summaries
 
 # textrank implementation with summa summarizer
 def summarize_article_tr(article_link):
     paragraphs = convert_article_text_to_paragraphs(article_link)
     summaries = summarize(paragraphs, split=True, ratio=0.2)
-    
-    # initialize list of top 10 sentences as a summary:
-    top_ten_sentences = []
-
-     # Extract top 10 sentences as the summary
-    for i in range(10):
-        top_ten_sentences.append(summaries[i])
-    
-    return top_ten_sentences
+    return summaries

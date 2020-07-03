@@ -6,26 +6,31 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Article Summarizer for Sharing on LinkedIn</h1>
-    <h4 style="text-align: center">Enter the link of the article to summarize</h4>
+    <h1 style="text-align: center">Article Summarizer for Sharing on Social Media</h1>
+    <h4 style="text-align: center">Enter the link of any long-form article to summarize.</h4>
+    <p>It produces a complete list of summaries that you can share on your social media feed, such as that of LinkedIn and Facebook.</p>
+    <p>The article can be any long-form article of any topic, such as technical articles from Wikipedia, medium.com, or your company blog if you look to promote your content</p>
     {% if error %}
         <p class=error><strong>Error:</strong> {{ error }}
     {% endif %}
     <form action="/" method="POST">
-        <input type="text" name="article_link" id="article_link">
+        <input placeholder="https://en.wikipedia.org/wiki/Principal_component_analysis" type="text" name="article_link" id="article_link">
         <select name="summarizerSelected" method="GET" action="/">
-            <option value="PageRank">PageRank</option>
-            <option value="TextRank">TextRank</option>
+            <option value="PageRank">'PageRank' Implementation of TextRank</option>
+            <option value="SummaNLP">SummaNLP Implementation of TextRank</option>
         </select>
         <input type="submit" value="Summarize">
     </form>
     <br>
-    <p>Here is a list of potential summaries you could use to post on your LinkedIn feed.</p>
+    <p>Here is a list of potential summaries you could use to post on your Social Media feed.</p>
+    <h4>{{ summarizerSelected }}</h4>
+    
     {% if summarizerSelected == 'PageRank' %}
         {% for summary in summaries_pr %}
             [{{loop.index}}]
             <br>
             {{ summary }}
+            <br>
             {{ article_link }}
             <br>
             <br>
@@ -35,6 +40,7 @@
             [{{loop.index}}]
             <br>
             {{ summary }}
+            <br>
             {{ article_link }}
             <br>
             <br>
