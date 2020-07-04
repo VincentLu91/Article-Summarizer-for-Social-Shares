@@ -35,7 +35,7 @@ Then in the browser, enter ```localhost:5000```
 
 You will see a prompt to enter the article URL. The field validates if the input given fits the pattern of a URL or not.
 
-![martymcfly](https://user-images.githubusercontent.com/3411100/86504539-86525a00-bd87-11ea-851d-e0c2fc65de75.png)
+![martymcfly](https://user-images.githubusercontent.com/3411100/86506889-9bd47d80-bda1-11ea-837b-6685d684b4f4.png)
 
 It prompts for an article link. For example, suppose the link is a Wikipedia article on Principal Component Analysis:
 https://en.wikipedia.org/wiki/Principal_component_analysis
