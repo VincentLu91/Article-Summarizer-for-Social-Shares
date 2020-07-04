@@ -42,4 +42,4 @@ https://en.wikipedia.org/wiki/Principal_component_analysis
 
 Here is the result:
 
-![martymcfly](https://user-images.githubusercontent.com/3411100/86504589-260fe800-bd88-11ea-8693-e29e4909789a.png)
+![martymcfly](https://user-images.githubusercontent.com/3411100/86506899-c8889500-bda1-11ea-85f0-21717e8531c8.png)
