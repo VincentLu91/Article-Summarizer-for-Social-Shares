@@ -6,6 +6,8 @@ The user can enter any long form article URL and the TextRank algorithm generate
 
 One limitation of this data app is that the summaries can be of any length so it may not always be suitable for sharing on platforms like Twitter, which enforces the limit of 140-characters. Another limitation is that the outputs of the app are for textual social sharing, so it does not apply to visual platforms such as Instagram or Snapchat.
 
+I have written a blog post on the topic: https://vincentlu91.github.io/2020/06/29/article-summary-for-social-sharing.html
+
 ## How to access the data app
 
 ### Deployed App
