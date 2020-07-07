@@ -1,6 +1,6 @@
 # Article Summarizer for Social Shares
 
-The article summarizer generates potential social media posts - each with a summary and an article link. It uses the implementation of TextRank from the [summanlp](https://github.com/summanlp/textrank) library. It uses extractive text summarization.
+The article summarizer generates potential social media posts - each with a summary and an article link. It uses the implementation of TextRank from the [summanlp](https://github.com/summanlp/textrank) library. TextRank is an extractive text summarization technique.
 
 The user can enter any long form article URL and the TextRank algorithm generate all possible summaries. Each summary contains a sentence (largely verbatim from source article) that attempts to explain a high level idea of the article along with the article URL that the user entered. The user could then use any of all the summaries to post them on their social media feed - such as Facebook and LinkedIn.
 
