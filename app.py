@@ -17,6 +17,9 @@ def index():
             error = 'Article Link is invalid'
             return render_template('index.html', error=error)
         summaries_tr = summarize_article_tr(article_link)
+        if summaries_tr is None:
+            error = 'Not enough summaries!'
+            return render_template('index.html', error=error)
         return render_template('index.html', article_link=article_link, summaries_tr=summaries_tr)
     else:
         return render_template('index.html')

@@ -22,4 +22,15 @@ def convert_article_text_to_paragraphs(article_link):
 def summarize_article_tr(article_link):
     paragraphs = convert_article_text_to_paragraphs(article_link)
     summaries = summarize(paragraphs, split=True, ratio=0.2)
+    if len(summaries) < 1:
+        return None
+    elif len(summaries) < 3:
+        return summaries
+    else:
+        return summaries[:3]
+    '''
+    if len(summaries) < 3:
+        return None
+    summaries = summaries[:3]
     return summaries
+    '''
