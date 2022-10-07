@@ -14,6 +14,10 @@ I have written a blog post on the topic: https://vincentlu91.github.io/2020/06/2
 
 You can use the following link here: https://technical-summary-proj.herokuapp.com
 
+How to use it
+- enter the link: https://en.wikipedia.org/wiki/Mammal
+- it should return 3 possible summaries
+
 ### Alternatively, you can access the application in development environment
 
 Dependencies are included in requirements.txt. To install the virtual environment, run the following:
