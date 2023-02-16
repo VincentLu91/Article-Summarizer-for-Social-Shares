@@ -83,6 +83,6 @@ vaderSentiment==3.3.2
 validators==0.15.0
 virtualenv==20.0.25
 wasabi==0.7.0
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 WTForms==2.3.1
 zipp==3.1.0
